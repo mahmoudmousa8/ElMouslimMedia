@@ -1,8 +1,23 @@
 import fs from "fs";
 import path from "path";
 
+const distDir = path.resolve("dist");
 const clientDir = path.resolve("dist/client");
 const manifestPath = path.join(clientDir, ".vite/manifest.json");
+
+function copyDirRecursive(src, dest) {
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDirRecursive(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
 
 if (fs.existsSync(clientDir)) {
   let cssFile = "";
@@ -63,5 +78,10 @@ if (fs.existsSync(clientDir)) {
 </html>`;
 
   fs.writeFileSync(path.join(clientDir, "index.html"), htmlContent);
-  console.log("Successfully generated dist/client/index.html!");
+  fs.writeFileSync(path.join(distDir, "index.html"), htmlContent);
+
+  // Copy client assets to dist root as well
+  copyDirRecursive(clientDir, distDir);
+
+  console.log("Successfully generated index.html at dist/client/index.html and dist/index.html!");
 }
