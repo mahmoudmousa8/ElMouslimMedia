@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "El Mouslim Digital Marketing provides Google Ads, web development, mobile applications, SaaS platforms, cloud infrastructure, cybersecurity, and digital subscription services in Alexandria, Egypt.",
+    "El Mouslim Digital Marketing provides Google Ads, web development, mobile applications, SaaS platforms, cloud infrastructure, cybersecurity, and digital subscription services in Saudi Arabia and the MENA region.",
   alternates: {
     canonical: "/",
   },
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     title:
       "El Mouslim Digital Marketing | Marketing, Web, SaaS and Cloud Solutions",
     description:
-      "Integrated Google Ads, software, SaaS, cloud infrastructure, cybersecurity, and digital subscription solutions.",
+      "Integrated Google Ads, custom web software, SaaS platforms, cloud infrastructure, cybersecurity, and performance advertising.",
     images: [
       {
-        url: "/images/about-neon.webp",
+        url: "/images/og-share.png",
         width: 1200,
         height: 630,
-        alt: "El Mouslim Digital Marketing",
+        alt: "المسلم للتسويق الإلكتروني - El Mouslim Digital Marketing",
       },
     ],
   },
@@ -49,15 +49,19 @@ export const metadata: Metadata = {
     title:
       "El Mouslim Digital Marketing | Marketing, Web, SaaS and Cloud Solutions",
     description:
-      "Integrated marketing, software, SaaS, cloud, and technical support services in Alexandria, Egypt.",
-    images: ["/images/about-neon.webp"],
+      "Integrated Google Ads, software, SaaS platforms, cloud infrastructure, and technical agency services.",
+    images: ["/images/og-share.png"],
   },
   other: {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -69,6 +73,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -77,6 +84,8 @@ export default function RootLayout({
               "@type": ["Organization", "LocalBusiness"],
               name: siteConfig.name,
               url: siteConfig.domain,
+              logo: `${siteConfig.domain}/logo.png`,
+              image: `${siteConfig.domain}/images/og-share.png`,
               email: siteConfig.email,
               telephone: siteConfig.phone,
               address: {

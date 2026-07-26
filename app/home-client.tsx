@@ -57,8 +57,11 @@ function Header({ active = "Home" }: { active?: string }) {
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <a className="brand" href="/" aria-label={`${siteConfig.name} home`}>
-        <span>{siteConfig.brandName}</span>
-        <small>{siteConfig.brandDescriptor}</small>
+        <img src="/logo.png" alt="El Mouslim Logo" className="brand-logo-img" />
+        <div>
+          <span>{siteConfig.brandName}</span>
+          <small>{siteConfig.brandDescriptor}</small>
+        </div>
       </a>
       <button
         className="menu-button"

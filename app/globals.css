@@ -92,6 +92,25 @@ svg {
   display: inline-flex;
   align-items: flex-end;
   gap: 8px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(243, 188, 28, 0.4);
+  box-shadow: 0 0 14px rgba(243, 188, 28, 0.35);
+}
+
+.brand > div {
+  display: flex;
+  flex-direction: column;
   line-height: 1;
   white-space: nowrap;
 }
