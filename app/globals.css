@@ -88,11 +88,6 @@ svg {
 }
 
 .brand {
-  width: 238px;
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 8px;
-.brand {
   display: flex;
   align-items: center;
   gap: 12px;
