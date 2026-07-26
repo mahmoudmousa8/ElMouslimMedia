@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import HomeClient from "./home-client";
-import { WorkPage, AboutPage, ServicesPage, ContactPage, BlogPage } from "./inner-pages";
+import { WorkPage, AboutPage, ServicesPage, ContactPage, BlogsPage } from "./inner-pages";
 import "./globals.css";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   if (path === "/about") return <AboutPage />;
   if (path === "/services") return <ServicesPage />;
   if (path === "/contact") return <ContactPage />;
-  if (path === "/blog" || path === "/blogs") return <BlogPage />;
+  if (path === "/blog" || path === "/blogs") return <BlogsPage />;
 
   return <HomeClient />;
 }
