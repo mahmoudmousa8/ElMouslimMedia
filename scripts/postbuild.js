@@ -1,0 +1,67 @@
+import fs from "fs";
+import path from "path";
+
+const clientDir = path.resolve("dist/client");
+const manifestPath = path.join(clientDir, ".vite/manifest.json");
+
+if (fs.existsSync(clientDir)) {
+  let cssFile = "";
+  let jsFile = "";
+
+  if (fs.existsSync(manifestPath)) {
+    try {
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+      for (const key in manifest) {
+        const item = manifest[key];
+        if (item.file && item.file.endsWith(".css")) {
+          cssFile = "/" + item.file;
+        }
+        if (item.isEntry && item.file) {
+          jsFile = "/" + item.file;
+        }
+      }
+    } catch (e) {
+      console.error("Error reading manifest.json:", e);
+    }
+  }
+
+  // Fallback if not found in manifest
+  if (!cssFile) {
+    const assetsDir = path.join(clientDir, "assets");
+    if (fs.existsSync(assetsDir)) {
+      const files = fs.readdirSync(assetsDir);
+      const css = files.find((f) => f.endsWith(".css"));
+      if (css) cssFile = "/assets/" + css;
+    }
+  }
+
+  if (!jsFile) {
+    const assetsDir = path.join(clientDir, "assets");
+    if (fs.existsSync(assetsDir)) {
+      const files = fs.readdirSync(assetsDir);
+      const js = files.find((f) => f.startsWith("index-") && f.endsWith(".js"));
+      if (js) jsFile = "/assets/" + js;
+    }
+  }
+
+  const htmlContent = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Mouslim Digital Marketing | Marketing, Web, SaaS and Cloud Solutions</title>
+    <meta name="description" content="El Mouslim Digital Marketing provides Google Ads, web development, mobile applications, SaaS platforms, cloud infrastructure, cybersecurity, and digital subscription services." />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    ${cssFile ? `<link rel="stylesheet" href="${cssFile}" />` : ""}
+  </head>
+  <body>
+    <div id="root"></div>
+    ${jsFile ? `<script type="module" src="${jsFile}"></script>` : ""}
+  </body>
+</html>`;
+
+  fs.writeFileSync(path.join(clientDir, "index.html"), htmlContent);
+  console.log("Successfully generated dist/client/index.html!");
+}
