@@ -808,8 +808,9 @@ svg {
 .portfolio-slider-shell {
   position: relative;
   overflow-x: auto;
-  overflow-y: hidden;
-  margin-top: 36px;
+  overflow-y: visible;
+  padding: 24px 6px;
+  margin-top: 12px;
   width: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -848,13 +849,11 @@ svg {
 .work-card {
   min-width: 0;
   position: relative;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  will-change: transform;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover,
 .work-card:hover {
-  transform: translateY(-10px);
   z-index: 50;
 }
 
