@@ -1,0 +1,33 @@
+# El Mouslim Digital Marketing (المسلم للتسويق الرقمي والحلول البرمجية)
+
+> Premium Digital Marketing Agency, E-Commerce Development, Custom SaaS Engineering, and Performance Advertising Solutions in Saudi Arabia and the MENA region.
+
+## Overview
+El Mouslim is an enterprise digital solutions agency specializing in:
+- High-ROI Performance Advertising (Google Ads Search, Display, Performance Max, Meta, TikTok, Snapchat, X Ads).
+- Custom Web & E-Commerce Development (Next.js, React, TypeScript, WordPress, WooCommerce).
+- Enterprise SaaS Platform Engineering (YouTube channel monetization systems, live streaming platforms, creator management tools).
+- Search Engine Optimization (SEO) & AI Search Engine Optimization (GEO/AIO).
+
+## Verified Live Portfolio & Client Work
+- **Orient Digital**: YouTube Channels Management & Creator Revenue SaaS Platform.
+- **Qaff Streamer**: Live Streaming Management & Broadcast Scheduling SaaS (`https://streamer.qaff.net/`).
+- **Qaff Digital**: Enterprise Digital Agency Website (`https://digital.qaff.net/`).
+- **Al Khatib Law Firm**: Legal Consulting & Corporate Law Platform (`https://alkhatiblawfirm.com/`).
+- **Nouthair Store**: Cosmetics & Beauty E-Commerce Store (`https://nouthair.com/`).
+- **Kanaf Real Estate**: Real Estate Development Portal (`https://kanaf.com.sa/`).
+- **Advance KSA**: Technical Consulting & Business Services (`https://advanceksa.com/ar/`).
+- **Al Jasir CPA**: Financial Auditing & Tax Consulting (`https://aljasircpa.com/`).
+- **Osos Law**: Judicial Litigation & Corporate Advisory (`https://osos-law.com/`).
+- **Almahrat Gift Store**: Charity Gifting & Instant Digital Cards (`https://almahrat.sa/`).
+- **Neonatal Care**: Healthcare Non-Profit Portal (`https://www.neonatal-mkh.org.sa/`).
+
+## Core Technology Stack
+- Frontend: Next.js 16, React 19, TypeScript, Vanilla CSS, Tailwind CSS.
+- Backend & SaaS: Node.js, Python, WebRTC, Streaming Protocols, Payment Gateways (Mada, Visa, Apple Pay).
+- Marketing Tech: Google Ads API, Google Tag Manager (GTM), GA4 Analytics, Meta Pixel, Snapchat Pixel.
+
+## Contact Information
+- Website: https://elmouslim.com
+- Direct WhatsApp / Phone: +201017851883
+- Contact Page: https://elmouslim.com/contact
