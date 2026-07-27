@@ -19,8 +19,7 @@ El Mouslim is an enterprise digital solutions agency specializing in:
 - **Advance KSA**: Technical Consulting & Business Services (`https://advanceksa.com/ar/`).
 - **Al Jasir CPA**: Financial Auditing & Tax Consulting (`https://aljasircpa.com/`).
 - **Osos Law**: Judicial Litigation & Corporate Advisory (`https://osos-law.com/`).
-- **Almahrat Gift Store**: Charity Gifting & Instant Digital Cards (`https://almahrat.sa/`).
-- **Neonatal Care**: Healthcare Non-Profit Portal (`https://www.neonatal-mkh.org.sa/`).
+
 
 ## Core Technology Stack
 - Frontend: Next.js 16, React 19, TypeScript, Vanilla CSS, Tailwind CSS.
